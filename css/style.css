@@ -1,0 +1,77 @@
+/* Cores e estilos gerais */
+
+
+:root { --escuro:#141b1d; --verde:#88cf55; --texto:#263238; --suave:#f2f6f3; }
+html { scroll-behavior:smooth; scroll-padding-top:75px; }
+body { font-family:Arial,Helvetica,sans-serif; color:var(--texto); line-height:1.7; }
+h1,h2,h3 { font-weight:700; line-height:1.2; }
+h2 { font-size:35px; margin-bottom:24px; }
+h3 { font-size:24px; }
+.section-padding { padding:85px 0; }
+.bg-suave { background:var(--suave); }
+.eyebrow { color:#477e29; font-size:.1360px; font-weight:700; letter-spacing:2px; }
+
+/* Fotografia redonda */
+
+.foto-perfil {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 7px solid #477e29;
+}
+
+/* Menu */
+
+
+.navbar { background:var(--escuro); box-shadow:0 2px 12px #0002; }
+.navbar-brand { font-size:1.7rem; }
+.ponto { color:var(--verde); }
+.nav-link:hover,.nav-link:focus { color:var(--verde)!important; }
+
+
+/* Apresentação */
+
+
+.hero { min-height:610px; background:var(--escuro); color:#fff; padding-top:90px; }
+.hero h1 { font-size:clamp(2.5rem,6vw,4.5rem); }
+.hero h1 span { color:var(--verde); }
+.hero .lead { max-width:680px; color:#d2dbd8; }
+.hero .eyebrow { color:var(--verde); }
+.btn-verde { background:var(--verde); border:2px solid var(--verde); color:#14200e; font-weight:700; padding:11px 25px; }
+.btn-verde:hover,.btn-verde:focus { background:#a6e77a; border-color:#a6e77a; color:#14200e; }
+.btn-outline-light { padding:11px 25px; }
+.avatar { width:245px; height:245px; border:5px solid var(--verde); border-radius:50%; display:grid; place-items:center; margin:auto; font-size:5rem; font-weight:700; color:var(--verde); background:#26332e; }
+
+
+/* Cartões */
+
+
+.info-box,.skill-card,.project-card { background:#fff; border-radius:16px; padding:26px; box-shadow:0 5px 25px #0000000b; }
+.info-box { background:var(--suave); }
+.skill-card { border-top:4px solid var(--verde); }
+.project-card { padding:0; overflow:hidden; transition:transform .2s; }
+.project-card:hover { transform:translateY(-5px); }
+.project-visual { height:145px; display:grid; place-items:center; background:#24332b; color:var(--verde); font-size:3.4rem; font-weight:700; }
+.tag { color:#467c2a; font-size:.8rem; font-weight:700; }
+.project-card h3 { margin-top:12px; }
+
+
+/* Experiência */
+
+
+.timeline { border-left:3px solid var(--verde); padding-left:28px; }
+.timeline article { position:relative; margin-bottom:30px; }
+.timeline article::before { content:""; position:absolute; width:13px; height:13px; border-radius:50%; background:var(--verde); left:-36px; top:7px; }
+.timeline span { color:#477e29; font-weight:700; }
+.timeline h3 { margin:5px 0 8px; }
+footer { background:var(--escuro); color:#ddd; }
+.skip-link { position:absolute; left:-9999px; top:10px; background:white; padding:8px; z-index:9999; }
+.skip-link:focus { left:10px; }
+
+
+/* Adaptação a ecrãs pequenos */
+
+
+@media (max-width:767px) { .section-padding { padding:60px 0; } .hero { text-align:center; padding-top:115px; } .hero .d-flex { justify-content:center; } .avatar { width:180px; height:180px; font-size:3.5rem; } h2 { font-size:1.9rem; } }
+@media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .project-card { transition:none; } }
